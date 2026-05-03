@@ -115,7 +115,6 @@ const API_KEY = '6ed570ac911dad2a255e2965a53ced74';
       showError('📍 Geolocation is not supported by your browser.');
       return;
     }
-    // Visual feedback: spin the icon
     locBtn.classList.add('loading');
     locBtn.disabled = true;
 
@@ -220,7 +219,6 @@ const API_KEY = '6ed570ac911dad2a255e2965a53ced74';
     const dayKeys = Object.keys(days).slice(0, 5);
     dayKeys.forEach(key => {
       const entries = days[key];
-      // Pick midday entry
       const mid = entries.find(e => {
         const h = new Date(e.dt * 1000).getUTCHours();
         return h >= 11 && h <= 14;
